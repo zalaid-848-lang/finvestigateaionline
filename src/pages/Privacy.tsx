@@ -1,34 +1,36 @@
+import { ShieldCheck, Lock, Eye } from 'lucide-react';
+
 export default function Privacy() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-      
-      <div className="prose prose-lg text-gray-700 space-y-4">
-        <p>Last updated: July 2026</p>
-        
-        <p>
-          Finvestigative AI is committed to protecting your privacy and handling your data with the highest standards of security and confidentiality.
-        </p>
-        
-        <h2 className="text-2xl font-bold mt-8">Data Collection</h2>
-        <p>
-          We collect only the data necessary to provide our investigation services. This includes:
-        </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Account information (name, email, organization)</li>
-          <li>Case data you upload for analysis</li>
-          <li>Usage patterns to improve our platform</li>
-        </ul>
-        
-        <h2 className="text-2xl font-bold mt-8">Data Protection</h2>
-        <p>
-          All data is encrypted at rest and in transit. We employ industry-standard security measures including SOC 2 compliance, regular audits, and strict access controls.
-        </p>
-        
-        <h2 className="text-2xl font-bold mt-8">Your Rights</h2>
-        <p>
-          You have the right to access, correct, or delete your data at any time. Contact our privacy team at privacy@finvestigative.ai.
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-blue-50 py-16 px-4">
+      <div className="container mx-auto max-w-4xl">
+        <h1 className="text-5xl font-extrabold text-center mb-4 bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent">
+          Privacy Policy
+        </h1>
+        <p className="text-center text-gray-600 mb-12">Last updated: July 2026</p>
+        <div className="space-y-8">
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
+            <div className="flex items-center gap-4 mb-4">
+              <ShieldCheck className="w-8 h-8 text-blue-600" />
+              <h3 className="text-2xl font-bold">Data Collection</h3>
+            </div>
+            <p className="text-gray-700">We collect only necessary data: account info, case data you upload, and usage patterns to improve our platform.</p>
+          </div>
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
+            <div className="flex items-center gap-4 mb-4">
+              <Lock className="w-8 h-8 text-green-600" />
+              <h3 className="text-2xl font-bold">Data Protection</h3>
+            </div>
+            <p className="text-gray-700">All data is encrypted at rest and in transit. We comply with SOC 2 standards and conduct regular audits.</p>
+          </div>
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
+            <div className="flex items-center gap-4 mb-4">
+              <Eye className="w-8 h-8 text-purple-600" />
+              <h3 className="text-2xl font-bold">Your Rights</h3>
+            </div>
+            <p className="text-gray-700">You can access, correct, or delete your data anytime. Contact privacy@finvestigative.ai.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

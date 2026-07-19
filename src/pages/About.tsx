@@ -1,21 +1,38 @@
+import { Target, Shield, Zap } from 'lucide-react';
+
 export default function About() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">About Finvestigative AI</h1>
-      
-      <div className="space-y-6 text-lg text-gray-700">
-        <p>
-          Finvestigative AI is a rigorous research workspace for financial investigation professionals. Our platform combines artificial intelligence with investigative workflows to help you connect entities, search source material, map relationships, and preserve evidence trails.
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-16 px-4">
+      <div className="container mx-auto max-w-5xl">
+        <h1 className="text-5xl font-extrabold text-center mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          About Finvestigative AI
+        </h1>
+        <p className="text-center text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
+          A rigorous research workspace for financial investigators, powered by AI.
         </p>
-        
-        <p>
-          We understand that financial investigations require precision, accuracy, and a clear chain of custody. Our tools are designed to augment human expertise, not replace it, providing investigators with powerful capabilities to uncover hidden connections and build solid cases.
-        </p>
-        
-        <h2 className="text-2xl font-bold mt-8 text-gray-900">Our Mission</h2>
-        <p>
-          To empower financial investigators with AI-assisted tools that streamline complex research while maintaining the highest standards of evidence integrity and analytical rigor.
-        </p>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+            <div className="p-3 bg-indigo-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+              <Target className="w-8 h-8 text-indigo-600" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Precision</h3>
+            <p className="text-gray-600">Connect entities with unmatched accuracy.</p>
+          </div>
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+            <div className="p-3 bg-purple-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+              <Shield className="w-8 h-8 text-purple-600" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Integrity</h3>
+            <p className="text-gray-600">Preserve evidence trails with full audit logs.</p>
+          </div>
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-6 text-center hover:scale-105 transition-transform duration-300">
+            <div className="p-3 bg-pink-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+              <Zap className="w-8 h-8 text-pink-600" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Speed</h3>
+            <p className="text-gray-600">AI-assisted research at lightning speed.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

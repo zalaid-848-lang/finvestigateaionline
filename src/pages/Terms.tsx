@@ -1,35 +1,36 @@
+import { FileCheck, Scale, AlertCircle } from 'lucide-react';
+
 export default function Terms() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
-      
-      <div className="prose prose-lg text-gray-700 space-y-4">
-        <p>Last updated: July 2026</p>
-        
-        <h2 className="text-2xl font-bold mt-8">Acceptance of Terms</h2>
-        <p>
-          By using Finvestigative AI, you agree to these terms. If you don't agree, please don't use our platform.
-        </p>
-        
-        <h2 className="text-2xl font-bold mt-8">Professional Use</h2>
-        <p>
-          Our platform is designed for professional financial investigators and should only be used for legitimate investigative purposes. Users are responsible for ensuring their use complies with all applicable laws and regulations.
-        </p>
-        
-        <h2 className="text-2xl font-bold mt-8">Intellectual Property</h2>
-        <p>
-          All technology, algorithms, and content within the platform are proprietary to Finvestigative AI. You may not copy, modify, or distribute our software without explicit permission.
-        </p>
-        
-        <h2 className="text-2xl font-bold mt-8">Limitation of Liability</h2>
-        <p>
-          Our platform assists investigations but does not replace professional judgment. We are not responsible for investigative outcomes or decisions made using our tools.
-        </p>
-        
-        <h2 className="text-2xl font-bold mt-8">Termination</h2>
-        <p>
-          We reserve the right to suspend or terminate accounts that violate these terms or engage in misuse of the platform.
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-stone-100 py-16 px-4">
+      <div className="container mx-auto max-w-4xl">
+        <h1 className="text-5xl font-extrabold text-center mb-4 bg-gradient-to-r from-gray-700 to-stone-700 bg-clip-text text-transparent">
+          Terms of Service
+        </h1>
+        <p className="text-center text-gray-600 mb-12">Last updated: July 2026</p>
+        <div className="space-y-8">
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
+            <div className="flex items-center gap-4 mb-4">
+              <FileCheck className="w-8 h-8 text-gray-700" />
+              <h3 className="text-2xl font-bold">Acceptance</h3>
+            </div>
+            <p className="text-gray-700">By using Finvestigative AI, you agree to these terms. Please don't use the platform if you disagree.</p>
+          </div>
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
+            <div className="flex items-center gap-4 mb-4">
+              <Scale className="w-8 h-8 text-gray-700" />
+              <h3 className="text-2xl font-bold">Professional Use</h3>
+            </div>
+            <p className="text-gray-700">Our platform is for legitimate investigative purposes only. Users must comply with all laws and regulations.</p>
+          </div>
+          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
+            <div className="flex items-center gap-4 mb-4">
+              <AlertCircle className="w-8 h-8 text-gray-700" />
+              <h3 className="text-2xl font-bold">Limitation of Liability</h3>
+            </div>
+            <p className="text-gray-700">Our tools assist investigations but do not replace professional judgment. We are not liable for outcomes or decisions made using our platform.</p>
+          </div>
+        </div>
       </div>
     </div>
   );
