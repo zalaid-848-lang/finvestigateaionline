@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+.vite/
+.tanstack/
+.DS_Store
+*.log
+.env
+*.tmp
