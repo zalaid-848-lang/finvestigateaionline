@@ -10,11 +10,4 @@ export default defineConfig({
     }),
     react(),
   ],
-  build: {
-    rollupOptions: {
-      input: {
-        main: 'src/main.tsx',
-      },
-    },
-  },
 })
