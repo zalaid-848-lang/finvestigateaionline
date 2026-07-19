@@ -1,14 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Root from './__root';
-import Index from './index';
-import About from '../pages/About';
-import Product from '../pages/Product';
-import Technology from '../pages/Technology';
-import Traction from '../pages/Traction';
-import Team from '../pages/Team';
-import Contact from '../pages/Contact';
-import Privacy from '../pages/Privacy';
-import Terms from '../pages/Terms';
+import Root from './routes/__root';
+import Index from './routes/index';
+import About from './pages/About';
+import Product from './pages/Product';
+import Technology from './pages/Technology';
+import Traction from './pages/Traction';
+import Team from './pages/Team';
+import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 const router = createBrowserRouter([
   {
