@@ -11,7 +11,7 @@ export default function Team() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all">
             <Users className="w-12 h-12 text-rose-600 mx-auto mb-4" />
-            <h3 className="text-xl font-bold">Leadership</h3>
+            <h3 className="text-xl font-bold text-gray-800">Leadership</h3>
             <ul className="mt-4 space-y-2 text-gray-700">
               <li>• Former investigators</li>
               <li>• PhDs in AI</li>
@@ -20,7 +20,7 @@ export default function Team() {
           </div>
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all">
             <Heart className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-            <h3 className="text-xl font-bold">Our Values</h3>
+            <h3 className="text-xl font-bold text-gray-800">Our Values</h3>
             <ul className="mt-4 space-y-2 text-gray-700">
               <li>• Integrity first</li>
               <li>• Evidence-based</li>
@@ -29,7 +29,7 @@ export default function Team() {
           </div>
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all">
             <Lightbulb className="w-12 h-12 text-yellow-600 mx-auto mb-4" />
-            <h3 className="text-xl font-bold">Innovation</h3>
+            <h3 className="text-xl font-bold text-gray-800">Innovation</h3>
             <ul className="mt-4 space-y-2 text-gray-700">
               <li>• Cutting-edge tech</li>
               <li>• Continuous learning</li>

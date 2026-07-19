@@ -12,21 +12,21 @@ export default function Terms() {
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
             <div className="flex items-center gap-4 mb-4">
               <FileCheck className="w-8 h-8 text-gray-700" />
-              <h3 className="text-2xl font-bold">Acceptance</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Acceptance</h3>
             </div>
             <p className="text-gray-700">By using Finvestigative AI, you agree to these terms. Please don't use the platform if you disagree.</p>
           </div>
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
             <div className="flex items-center gap-4 mb-4">
               <Scale className="w-8 h-8 text-gray-700" />
-              <h3 className="text-2xl font-bold">Professional Use</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Professional Use</h3>
             </div>
             <p className="text-gray-700">Our platform is for legitimate investigative purposes only. Users must comply with all laws and regulations.</p>
           </div>
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
             <div className="flex items-center gap-4 mb-4">
               <AlertCircle className="w-8 h-8 text-gray-700" />
-              <h3 className="text-2xl font-bold">Limitation of Liability</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Limitation of Liability</h3>
             </div>
             <p className="text-gray-700">Our tools assist investigations but do not replace professional judgment. We are not liable for outcomes or decisions made using our platform.</p>
           </div>

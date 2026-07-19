@@ -12,21 +12,21 @@ export default function Privacy() {
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
             <div className="flex items-center gap-4 mb-4">
               <ShieldCheck className="w-8 h-8 text-blue-600" />
-              <h3 className="text-2xl font-bold">Data Collection</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Data Collection</h3>
             </div>
             <p className="text-gray-700">We collect only necessary data: account info, case data you upload, and usage patterns to improve our platform.</p>
           </div>
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
             <div className="flex items-center gap-4 mb-4">
               <Lock className="w-8 h-8 text-green-600" />
-              <h3 className="text-2xl font-bold">Data Protection</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Data Protection</h3>
             </div>
             <p className="text-gray-700">All data is encrypted at rest and in transit. We comply with SOC 2 standards and conduct regular audits.</p>
           </div>
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8">
             <div className="flex items-center gap-4 mb-4">
               <Eye className="w-8 h-8 text-purple-600" />
-              <h3 className="text-2xl font-bold">Your Rights</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Your Rights</h3>
             </div>
             <p className="text-gray-700">You can access, correct, or delete your data anytime. Contact privacy@finvestigative.ai.</p>
           </div>
