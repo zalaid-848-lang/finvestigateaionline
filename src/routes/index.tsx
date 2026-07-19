@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router'
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -49,17 +49,6 @@ const proofPoints = [
   'Exportable evidence trails for every investigation',
   'Private workspaces built for sensitive research',
 ]
-
-function Wordmark() {
-  return (
-    <Link className="wordmark" to="/" aria-label="finvestigativeai home">
-      <span className="wordmark-mark" aria-hidden="true">
-        F/
-      </span>
-      <span>finvestigativeai</span>
-    </Link>
-  )
-}
 
 function EvidenceGraph() {
   return (
@@ -126,207 +115,165 @@ function EvidenceGraph() {
 
 function HomePage() {
   return (
-    <div className="site-shell" id="top">
-      <header className="site-header">
-        <Wordmark />
-        <nav className="desktop-nav" aria-label="Main navigation" style={{
-          display: 'flex',
-          gap: '1.5rem',
-          alignItems: 'center',
-          flexWrap: 'wrap'
-        }}>
-          <Link to="/" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Home</Link>
-          <Link to="/about" style={{ color: '#f5f0e8', textDecoration: 'none' }}>About</Link>
-          <Link to="/product" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Product</Link>
-          <Link to="/technology" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Technology</Link>
-          <Link to="/traction" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Traction</Link>
-          <Link to="/team" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Team</Link>
-          <Link to="/contact" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Contact</Link>
-          <Link to="/privacy" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Privacy</Link>
-          <Link to="/terms" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Terms</Link>
-        </nav>
-        <Link className="header-cta" to="/contact" style={{
-          background: '#d4c5a0',
-          color: '#191a18',
-          padding: '0.5rem 1.5rem',
-          borderRadius: '4px',
-          textDecoration: 'none',
-          fontWeight: '500'
-        }}>
-          Contact Us
-        </Link>
-      </header>
-
-      <main>
-        <section className="hero" aria-labelledby="hero-title">
-          <div className="hero-copy">
-            <div className="eyebrow reveal reveal-1">
-              <span className="eyebrow-rule" /> Intelligence for financial investigations
-            </div>
-            <h1 id="hero-title" className="reveal reveal-2">
-              Follow the money.<br />
-              <em>Find what matters.</em>
-            </h1>
-            <p className="hero-lede reveal reveal-3">
-              An AI research workspace that turns fragmented financial records into
-              traceable evidence, connected entities, and defensible findings.
-            </p>
-            <div className="hero-actions reveal reveal-4">
-              <a className="button button-dark" href="#access">
-                Start an investigation <ArrowDownRight size={18} />
-              </a>
-              <a className="text-link" href="#platform">
-                Explore the platform <ChevronRight size={16} />
-              </a>
-            </div>
-            <div className="trust-note reveal reveal-4">
-              <ShieldCheck size={17} />
-              <span>Built for analysts, journalists, counsel, and compliance teams.</span>
-            </div>
+    <main>
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-copy">
+          <div className="eyebrow reveal reveal-1">
+            <span className="eyebrow-rule" /> Intelligence for financial investigations
           </div>
-
-          <div className="hero-visual reveal reveal-3">
-            <div className="case-label">EVIDENCE MAP / 04</div>
-            <EvidenceGraph />
-            <div className="visual-caption">
-              <span>01</span>
-              <p>From question to cited finding—in one connected workspace.</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="signal-strip" aria-label="Platform capabilities">
-          <span>SEC filings</span>
-          <span>Corporate registries</span>
-          <span>Sanctions data</span>
-          <span>Court records</span>
-          <span>News archives</span>
-        </section>
-
-        <section className="intro-section" id="platform">
-          <div className="section-index">01 / THE PLATFORM</div>
-          <div className="intro-heading">
-            <p>Financial truth is rarely in one document.</p>
-            <h2>We help you connect the fragments.</h2>
-          </div>
-          <p className="intro-copy">
-            Finvestigative AI combines investigative search, entity intelligence,
-            and source-grounded analysis. Move from suspicion to evidence without
-            losing the chain of reasoning along the way.
+          <h1 id="hero-title" className="reveal reveal-2">
+            Follow the money.<br />
+            <em>Find what matters.</em>
+          </h1>
+          <p className="hero-lede reveal reveal-3">
+            An AI research workspace that turns fragmented financial records into
+            traceable evidence, connected entities, and defensible findings.
           </p>
-        </section>
-
-        <section className="capability-grid">
-          {investigations.map((item) => {
-            const Icon = item.icon
-            return (
-              <article className="capability-card" key={item.index}>
-                <div className="card-topline">
-                  <span>{item.index}</span>
-                  <Icon size={23} strokeWidth={1.5} aria-hidden="true" />
-                </div>
-                <div className="card-content">
-                  <p className="card-label">{item.label}</p>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
-                <a href="#access" aria-label={`Learn about ${item.label}`}>
-                  Examine capability <ArrowUpRight size={17} />
-                </a>
-              </article>
-            )
-          })}
-        </section>
-
-        <section className="method-section" id="method">
-          <div className="method-panel">
-            <div className="section-index section-index-light">02 / THE METHOD</div>
-            <h2>AI that shows its work.</h2>
-            <p>
-              Every answer is grounded in the underlying record. Inspect the source,
-              challenge the conclusion, and preserve an audit-ready trail.
-            </p>
-            <div className="method-list">
-              {proofPoints.map((point) => (
-                <div className="method-item" key={point}>
-                  <span><Check size={14} /></span>
-                  {point}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="source-panel">
-            <div className="source-document">
-              <div className="document-head">
-                <span>EXHIBIT 10.4</span>
-                <span>PAGE 17 / 42</span>
-              </div>
-              <div className="document-title">RELATED PARTY TRANSACTIONS</div>
-              <div className="document-lines">
-                <span className="line w-92" />
-                <span className="line w-78" />
-                <span className="line highlighted w-88" />
-                <span className="line highlighted w-64" />
-                <span className="line w-82" />
-                <span className="line w-70" />
-              </div>
-              <div className="document-note">
-                <span>AI</span>
-                <p>Payment recipient is controlled by a director's family trust.</p>
-              </div>
-            </div>
-            <div className="citation-chip">CITATION VERIFIED · 2 SOURCES</div>
-          </div>
-        </section>
-
-        <section className="security-section" id="security">
-          <div>
-            <div className="section-index">03 / CONTROL</div>
-            <h2>Your investigation stays yours.</h2>
-          </div>
-          <div className="security-copy">
-            <p>
-              Sensitive work requires more than smart answers. Finvestigative AI is
-              designed around private workspaces, granular access, and a clear record
-              of every source and action.
-            </p>
-            <div className="security-tags">
-              <span>Encrypted at rest</span>
-              <span>Workspace controls</span>
-              <span>Audit history</span>
-              <span>Source provenance</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="closing-section" id="access">
-          <div className="closing-code">F/AI — PRIVATE BETA</div>
-          <div className="closing-content">
-            <h2>Investigate with<br /><em>more certainty.</em></h2>
-            <p>
-              Join the private beta for research teams that need faster answers
-              without compromising evidentiary rigor.
-            </p>
-            <a className="button button-light" href="mailto:access@finvestigative.ai">
-              Request private access <ArrowUpRight size={18} />
+          <div className="hero-actions reveal reveal-4">
+            <a className="button button-dark" href="#access">
+              Start an investigation <ArrowDownRight size={18} />
+            </a>
+            <a className="text-link" href="#platform">
+              Explore the platform <ChevronRight size={16} />
             </a>
           </div>
-          <div className="closing-mark" aria-hidden="true">F/</div>
-        </section>
-      </main>
-
-      <footer>
-        <Wordmark />
-        <p>Financial intelligence, with evidence attached.</p>
-        <div className="footer-links">
-          <Link to="/contact">Contact</Link>
-          <Link to="/privacy">Privacy</Link>
-          <Link to="/terms">Terms</Link>
-          <span>© 2026</span>
+          <div className="trust-note reveal reveal-4">
+            <ShieldCheck size={17} />
+            <span>Built for analysts, journalists, counsel, and compliance teams.</span>
+          </div>
         </div>
-      </footer>
-    </div>
+
+        <div className="hero-visual reveal reveal-3">
+          <div className="case-label">EVIDENCE MAP / 04</div>
+          <EvidenceGraph />
+          <div className="visual-caption">
+            <span>01</span>
+            <p>From question to cited finding—in one connected workspace.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="signal-strip" aria-label="Platform capabilities">
+        <span>SEC filings</span>
+        <span>Corporate registries</span>
+        <span>Sanctions data</span>
+        <span>Court records</span>
+        <span>News archives</span>
+      </section>
+
+      <section className="intro-section" id="platform">
+        <div className="section-index">01 / THE PLATFORM</div>
+        <div className="intro-heading">
+          <p>Financial truth is rarely in one document.</p>
+          <h2>We help you connect the fragments.</h2>
+        </div>
+        <p className="intro-copy">
+          Finvestigative AI combines investigative search, entity intelligence,
+          and source-grounded analysis. Move from suspicion to evidence without
+          losing the chain of reasoning along the way.
+        </p>
+      </section>
+
+      <section className="capability-grid">
+        {investigations.map((item) => {
+          const Icon = item.icon
+          return (
+            <article className="capability-card" key={item.index}>
+              <div className="card-topline">
+                <span>{item.index}</span>
+                <Icon size={23} strokeWidth={1.5} aria-hidden="true" />
+              </div>
+              <div className="card-content">
+                <p className="card-label">{item.label}</p>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+              <a href="#access" aria-label={`Learn about ${item.label}`}>
+                Examine capability <ArrowUpRight size={17} />
+              </a>
+            </article>
+          )
+        })}
+      </section>
+
+      <section className="method-section" id="method">
+        <div className="method-panel">
+          <div className="section-index section-index-light">02 / THE METHOD</div>
+          <h2>AI that shows its work.</h2>
+          <p>
+            Every answer is grounded in the underlying record. Inspect the source,
+            challenge the conclusion, and preserve an audit-ready trail.
+          </p>
+          <div className="method-list">
+            {proofPoints.map((point) => (
+              <div className="method-item" key={point}>
+                <span><Check size={14} /></span>
+                {point}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="source-panel">
+          <div className="source-document">
+            <div className="document-head">
+              <span>EXHIBIT 10.4</span>
+              <span>PAGE 17 / 42</span>
+            </div>
+            <div className="document-title">RELATED PARTY TRANSACTIONS</div>
+            <div className="document-lines">
+              <span className="line w-92" />
+              <span className="line w-78" />
+              <span className="line highlighted w-88" />
+              <span className="line highlighted w-64" />
+              <span className="line w-82" />
+              <span className="line w-70" />
+            </div>
+            <div className="document-note">
+              <span>AI</span>
+              <p>Payment recipient is controlled by a director's family trust.</p>
+            </div>
+          </div>
+          <div className="citation-chip">CITATION VERIFIED · 2 SOURCES</div>
+        </div>
+      </section>
+
+      <section className="security-section" id="security">
+        <div>
+          <div className="section-index">03 / CONTROL</div>
+          <h2>Your investigation stays yours.</h2>
+        </div>
+        <div className="security-copy">
+          <p>
+            Sensitive work requires more than smart answers. Finvestigative AI is
+            designed around private workspaces, granular access, and a clear record
+            of every source and action.
+          </p>
+          <div className="security-tags">
+            <span>Encrypted at rest</span>
+            <span>Workspace controls</span>
+            <span>Audit history</span>
+            <span>Source provenance</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="closing-section" id="access">
+        <div className="closing-code">F/AI — PRIVATE BETA</div>
+        <div className="closing-content">
+          <h2>Investigate with<br /><em>more certainty.</em></h2>
+          <p>
+            Join the private beta for research teams that need faster answers
+            without compromising evidentiary rigor.
+          </p>
+          <a className="button button-light" href="mailto:access@finvestigative.ai">
+            Request private access <ArrowUpRight size={18} />
+          </a>
+        </div>
+        <div className="closing-mark" aria-hidden="true">F/</div>
+      </section>
+    </main>
   )
 }
-export default HomePage;
+
+export default HomePage
