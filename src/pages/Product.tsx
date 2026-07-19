@@ -14,7 +14,7 @@ export default function Product() {
               <Link className="w-8 h-8 text-cyan-600" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold">Entity Connection Engine</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Entity Connection Engine</h3>
               <p className="text-gray-700 mt-2">Automatically discover relationships between people, companies, and transactions across millions of data points.</p>
             </div>
           </div>
@@ -23,7 +23,7 @@ export default function Product() {
               <FileText className="w-8 h-8 text-blue-600" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold">Evidence Trail Management</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Evidence Trail Management</h3>
               <p className="text-gray-700 mt-2">Immutable audit logs, source citations, and chain-of-custody documentation built into your workflow.</p>
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function Product() {
               <Search className="w-8 h-8 text-indigo-600" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold">AI-Assisted Research</h3>
+              <h3 className="text-2xl font-bold text-gray-800">AI-Assisted Research</h3>
               <p className="text-gray-700 mt-2">Summarize documents, extract key facts, and generate hypotheses while maintaining investigator control.</p>
             </div>
           </div>

@@ -12,7 +12,7 @@ export default function Technology() {
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all">
             <div className="flex items-center gap-4 mb-4">
               <Cpu className="w-8 h-8 text-blue-600" />
-              <h3 className="text-2xl font-bold">Frontend</h3>
+              <h3 className="text-2xl font-bold text-gray-800">Frontend</h3>
             </div>
             <ul className="space-y-2 text-gray-700">
               <li>• React 19 + TypeScript</li>
@@ -24,7 +24,7 @@ export default function Technology() {
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all">
             <div className="flex items-center gap-4 mb-4">
               <Database className="w-8 h-8 text-purple-600" />
-              <h3 className="text-2xl font-bold">AI & Data</h3>
+              <h3 className="text-2xl font-bold text-gray-800">AI & Data</h3>
             </div>
             <ul className="space-y-2 text-gray-700">
               <li>• Large Language Models</li>
