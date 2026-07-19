@@ -15,21 +15,21 @@ export default function About() {
             <div className="p-3 bg-indigo-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
               <Target className="w-8 h-8 text-indigo-600" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Precision</h3>
+            <h3 className="text-xl font-bold mb-2 text-gray-800">Precision</h3>
             <p className="text-gray-600">Connect entities with unmatched accuracy.</p>
           </div>
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-6 text-center hover:scale-105 transition-transform duration-300">
             <div className="p-3 bg-purple-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
               <Shield className="w-8 h-8 text-purple-600" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Integrity</h3>
+            <h3 className="text-xl font-bold mb-2 text-gray-800">Integrity</h3>
             <p className="text-gray-600">Preserve evidence trails with full audit logs.</p>
           </div>
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-6 text-center hover:scale-105 transition-transform duration-300">
             <div className="p-3 bg-pink-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
               <Zap className="w-8 h-8 text-pink-600" />
             </div>
-            <h3 className="text-xl font-bold mb-2">Speed</h3>
+            <h3 className="text-xl font-bold mb-2 text-gray-800">Speed</h3>
             <p className="text-gray-600">AI-assisted research at lightning speed.</p>
           </div>
         </div>

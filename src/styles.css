@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* Add your styles here */
 :root {
   font-family: system-ui, -apple-system, sans-serif;
@@ -13,26 +15,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #191a18;
-  border-bottom: 1px solid #d4c5a0;
-}
-
-.desktop-nav {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.desktop-nav a {
-  color: #f5f0e8;
-  text-decoration: none;
 }
 
 footer {
