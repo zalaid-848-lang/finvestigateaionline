@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -52,12 +52,12 @@ const proofPoints = [
 
 function Wordmark() {
   return (
-    <a className="wordmark" href="#top" aria-label="finvestigativeai home">
+    <Link className="wordmark" to="/" aria-label="finvestigativeai home">
       <span className="wordmark-mark" aria-hidden="true">
         F/
       </span>
       <span>finvestigativeai</span>
-    </a>
+    </Link>
   )
 }
 
@@ -129,14 +129,32 @@ function HomePage() {
     <div className="site-shell" id="top">
       <header className="site-header">
         <Wordmark />
-        <nav className="desktop-nav" aria-label="Main navigation">
-          <a href="#platform">Platform</a>
-          <a href="#method">Method</a>
-          <a href="#security">Security</a>
+        <nav className="desktop-nav" aria-label="Main navigation" style={{
+          display: 'flex',
+          gap: '1.5rem',
+          alignItems: 'center',
+          flexWrap: 'wrap'
+        }}>
+          <Link to="/" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Home</Link>
+          <Link to="/about" style={{ color: '#f5f0e8', textDecoration: 'none' }}>About</Link>
+          <Link to="/product" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Product</Link>
+          <Link to="/technology" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Technology</Link>
+          <Link to="/traction" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Traction</Link>
+          <Link to="/team" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Team</Link>
+          <Link to="/contact" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Contact</Link>
+          <Link to="/privacy" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Privacy</Link>
+          <Link to="/terms" style={{ color: '#f5f0e8', textDecoration: 'none' }}>Terms</Link>
         </nav>
-        <a className="header-cta" href="#access">
-          Request access <ArrowUpRight size={15} />
-        </a>
+        <Link className="header-cta" to="/contact" style={{
+          background: '#d4c5a0',
+          color: '#191a18',
+          padding: '0.5rem 1.5rem',
+          borderRadius: '4px',
+          textDecoration: 'none',
+          fontWeight: '500'
+        }}>
+          Contact Us
+        </Link>
       </header>
 
       <main>
@@ -255,7 +273,7 @@ function HomePage() {
               </div>
               <div className="document-note">
                 <span>AI</span>
-                <p>Payment recipient is controlled by a director’s family trust.</p>
+                <p>Payment recipient is controlled by a director's family trust.</p>
               </div>
             </div>
             <div className="citation-chip">CITATION VERIFIED · 2 SOURCES</div>
@@ -302,11 +320,13 @@ function HomePage() {
         <Wordmark />
         <p>Financial intelligence, with evidence attached.</p>
         <div className="footer-links">
-          <a href="mailto:hello@finvestigative.ai">Contact</a>
-          <a href="#security">Privacy</a>
+          <Link to="/contact">Contact</Link>
+          <Link to="/privacy">Privacy</Link>
+          <Link to="/terms">Terms</Link>
           <span>© 2026</span>
         </div>
       </footer>
     </div>
   )
 }
+export default HomePage;
